@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xsd:schema  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:xlf="urn:oasis:names:tc:xliff:document:1.2" elementFormDefault="qualified" xmlns:itsx="http://itsx.uni.me" targetNamespace="http://itsx.uni.me" xml:lang="en">
+  <!-- Import for xml:lang and xml:space -->
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+<xsd:import namespace="urn:oasis:names:tc:xliff:document:1.2" schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2.xsd"/>
+
+<xsd:element name="glossary-entry" type="glossary-entry-type"/>
+<xsd:complexType name="glossary-entry-type">
+    <xsd:complexContent>
+        <xsd:restriction >
+            <xsd:sequence>
+                <xsd:element ref="xlf:internal-file" minOccurs="0"/>
+            </xsd:sequence>
+        </xsd:restriction>
+        <xsd:sequence>
+            <xsd:element name="term" type="xsd:string"/>
+            <xsd:element name="translation" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xs:string" use="required"/> 
+    </xsd:complexContent>
+</xsd:complexType>
+
+</xsd:schema>
